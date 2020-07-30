@@ -1,0 +1,11 @@
+{
+  "require": {
+    "twig/twig" : "1.42.*",
+    "sendgrid/sendgrid": "~7"
+  },
+  "autoload": {
+    "psr-4": {
+      "oldspice\\" : "src/"
+    }
+  }
+}
