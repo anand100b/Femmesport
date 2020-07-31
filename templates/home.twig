@@ -9,12 +9,6 @@
       {% include 'partials/categories.twig' %}
       </div>
       <div class="col-md-10">
-        <div class="row">
-            <div class= "col">
-            <p> Total of {{products.total}} products</p>
-
-            </div>
-        </div>
       <div id="game">
      <div class="row">
         {% for item in products.items %}
@@ -32,10 +26,7 @@
       </div>
       </div>
       </div>
-      
-        
-      </div>
     </div>
-    {% include 'partials/footer.twig' %}
   </body>
+    {% include 'partials/footer.twig' %}
 </html>

@@ -1,14 +1,29 @@
+
 body{
-    background-color: #1D2D44;
-    color: #F0EBD8;
+    height:100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: radial-gradient(circle, #ff8471, #ff7b76, #fd737b, #fb6a82, #f76389, #f76389, #f76389, #f76389, #fb6a82, #fd737b, #ff7b76, #ff8471);
 }
 footer{
-    height:90px;
-    color: #F0EBD8;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height:70px;
+    background-color: #FFBE5C;
+    width: 100%;
     text-align: center;
+    opacity: .3;
 }
 footer p{
     font-size: medium;
+
+}
+#spacing{
+    
+    background-color: #F05A93;
+    opacity: .4;
 }
 #center{
     width:100%;
