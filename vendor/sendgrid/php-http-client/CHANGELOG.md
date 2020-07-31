@@ -3,51 +3,6 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[2020-07-22] Version 3.11.0
----------------------------
-**Library - Test**
-- [PR #120](https://github.com/sendgrid/php-http-client/pull/120): test enhancements. Thanks to [@peter279k](https://github.com/peter279k)!
-
-**Library - Feature**
-- [PR #109](https://github.com/sendgrid/php-http-client/pull/109): automatic code style checking. Thanks to [@misantron](https://github.com/misantron)!
-
-
-[2020-06-24] Version 3.10.8
----------------------------
-**Library - Fix**
-- [PR #143](https://github.com/sendgrid/php-http-client/pull/143): Composer configuration, typos and type hints. Thanks to [@kampalex](https://github.com/kampalex)!
-
-
-[2020-06-10] Version 3.10.7
----------------------------
-**Library - Fix**
-- [PR #144](https://github.com/sendgrid/php-http-client/pull/144): replace Throwable with Exception. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-
-
-[2020-04-29] Version 3.10.6
----------------------------
-**Library - Fix**
-- [PR #141](https://github.com/sendgrid/php-http-client/pull/141): add the singular 'suppression' method. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-
-
-[2020-03-18] Version 3.10.5
----------------------------
-**Library - Docs**
-- [PR #111](https://github.com/sendgrid/php-http-client/pull/111): run .md files through grammarly. Thanks to [@redbrickone](https://github.com/redbrickone)!
-
-
-[2020-03-04] Version 3.10.4
----------------------------
-**Library - Chore**
-- [PR #140](https://github.com/sendgrid/php-http-client/pull/140): add PHP 7.4 to Travis and test with lowest dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
-
-
-[2020-02-19] Version 3.10.3
----------------------------
-**Library - Fix**
-- [PR #134](https://github.com/sendgrid/php-http-client/pull/134): Change contactsdb to marketing api #133. Thanks to [@murich](https://github.com/murich)!
-
-
 [2020-01-22] Version 3.10.2
 ---------------------------
 **Library - Docs**

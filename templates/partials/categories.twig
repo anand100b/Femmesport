@@ -1,0 +1,13 @@
+<nav id="categories">
+<a href="index.php" class="nav-link"> All categories</a>
+
+{% for category in categories.items %}
+{% set active = (categories.active == category.category_id)? 'active' : '' %}
+<a href ="index.php?category_id={{category.category_id}}" class="nav-link {{active}}">
+{{category.category_name}}
+</a>
+{% endfor %}
+
+</nav>
+
+

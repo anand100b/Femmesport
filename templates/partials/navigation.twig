@@ -1,0 +1,30 @@
+<div id="spacing">
+<section class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+  <a href="index.php" class="navbar-brand">Shop</a>
+  <button class="navbar-toggler" data-target="#main-nav" data-toggle="collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline" method="get" action="search.php">
+    <input type="search" name="query" placeholder="Search our catalogue" class="form-control" value="">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+  <nav class="d-flex">
+    <a href="wishlist.php" class="btn text-light">
+      <i class="fas fa-heart"></i>
+      {% set wishlist_total = (wish_total) ? wish_total : 0 %}
+      <span class="badge badge-secondary">{{wishlist_total}}</span>
+    </a>
+    <a href="shoppingcart.php" class="btn text-light">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="badge badge-primary">0</span>
+    </a>
+  </nav>
+  <div class="collapse navbar-collapse" id="main-nav">
+    <nav class="nav navbar-nav ml-auto">
+      {% for item in navigation %}
+        <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+</div>

@@ -1,4 +1,6 @@
 {
+  "name": "",
+  "description": "",
   "require": {
     "twig/twig" : "1.42.*",
     "sendgrid/sendgrid": "~7"

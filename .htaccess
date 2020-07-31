@@ -1,0 +1,6 @@
+SetEnv host oa4.info
+SetEnv user moon_user
+SetEnv password MoonPassword
+SetEnv database moon_data
+SetEnv sendgrid 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
+

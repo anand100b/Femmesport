@@ -1,11 +1,18 @@
 <?php
 /**
  * This helper builds the MailSettings object for a /mail/send API call
+ *
+ * PHP Version - 5.6, 7.0, 7.1, 7.2
+ *
+ * @package   SendGrid\Mail
+ * @author    Elmer Thomas <dx@sendgrid.com>
+ * @copyright 2018-19 Twilio SendGrid
+ * @license   https://opensource.org/licenses/MIT The MIT License
+ * @version   GIT: <git_id>
+ * @link      http://packagist.org/packages/sendgrid/sendgrid
  */
 
 namespace SendGrid\Mail;
-
-use SendGrid\Helper\Assert;
 
 /**
  * This class is used to construct a MailSettings object for the /mail/send API call
@@ -28,17 +35,16 @@ class MailSettings implements \JsonSerializable
     /** @var $spam_check SpamCheck object */
     private $spam_check;
 
-	/**
-	 * Optional constructor
-	 *
-	 * @param BccSettings|null          $bcc_settings           BccSettings object
-	 * @param BypassListManagement|null $bypass_list_management BypassListManagement
-	 *                                                          object
-	 * @param Footer|null               $footer                 Footer object
-	 * @param SandBoxMode|null          $sandbox_mode           SandBoxMode object
-	 * @param SpamCheck|null            $spam_check             SpamCheck object
-	 * @throws \SendGrid\Mail\TypeException
-	 */
+    /**
+     * Optional constructor
+     *
+     * @param BccSettings|null $bcc_settings BccSettings object
+     * @param BypassListManagement|null $bypass_list_management BypassListManagement
+     *                                                          object
+     * @param Footer|null $footer Footer object
+     * @param SandBoxMode|null $sandbox_mode SandBoxMode object
+     * @param SpamCheck|null $spam_check SpamCheck object
+     */
     public function __construct(
         $bcc_settings = null,
         $bypass_list_management = null,
@@ -70,9 +76,9 @@ class MailSettings implements \JsonSerializable
      *                                 if the setting is enabled
      * @param string|null $email The email address that you would like
      *                                 to receive the BCC
-     *
-     * @throws \SendGrid\Mail\TypeException
-     */
+     * 
+     * @throws TypeException
+     */ 
     public function setBccSettings($enable, $email = null)
     {
         if ($enable instanceof BccSettings) {
@@ -80,9 +86,11 @@ class MailSettings implements \JsonSerializable
             $this->bcc = $bcc;
             return;
         }
-        Assert::boolean(
-            $enable, 'enable', 'Value "$enable" must be an instance of SendGrid\Mail\BccSettings or a boolean.'
-        );
+        if (!is_bool($enable)) {
+            throw new TypeException(
+                '$enable must be an instance of SendGrid\Mail\BccSettings or of type bool.'
+            );
+        }
         $this->bcc = new BccSettings($enable, $email);
     }
 
@@ -102,8 +110,8 @@ class MailSettings implements \JsonSerializable
      * @param BypassListManagement|bool $enable The BypassListManagement
      *                                          object or an indication
      *                                          if the setting is enabled
-     *
-     * @throws \SendGrid\Mail\TypeException
+     * 
+     * @throws TypeException
      */
     public function setBypassListManagement($enable)
     {
@@ -112,10 +120,13 @@ class MailSettings implements \JsonSerializable
             $this->bypass_list_management = $bypass_list_management;
             return;
         }
-        Assert::boolean(
-            $enable, 'enable', 'Value "$enable" must be an instance of SendGrid\Mail\BypassListManagement or a boolean.'
-        );
+        if (!is_bool($enable)) {
+            throw new TypeException(
+                '$enable must be an instance of SendGrid\Mail\BypassListManagement or of type bool.'
+            );
+        }
         $this->bypass_list_management = new BypassListManagement($enable);
+        return;
     }
 
     /**
@@ -136,7 +147,7 @@ class MailSettings implements \JsonSerializable
      * @param string|null $text The plain text content of your footer
      * @param string|null $html The HTML content of your footer
      *
-     * @throws TypeException
+     * @return null
      */
     public function setFooter($enable, $text = null, $html = null)
     {
@@ -146,6 +157,7 @@ class MailSettings implements \JsonSerializable
             return;
         }
         $this->footer = new Footer($enable, $text, $html);
+        return;
     }
 
     /**
@@ -164,7 +176,7 @@ class MailSettings implements \JsonSerializable
      * @param SandBoxMode|bool $enable The SandBoxMode object or an
      *                                 indication if the setting is enabled
      *
-     * @throws TypeException
+     * @return null
      */
     public function setSandboxMode($enable)
     {
@@ -173,10 +185,8 @@ class MailSettings implements \JsonSerializable
             $this->sandbox_mode = $sandbox_mode;
             return;
         }
-        Assert::boolean(
-            $enable, 'enable', 'Value "$enable" must be an instance of SendGrid\Mail\SandBoxMode or a boolean.'
-        );
         $this->sandbox_mode = new SandBoxMode($enable);
+        return;
     }
 
     /**
@@ -191,8 +201,6 @@ class MailSettings implements \JsonSerializable
 
     /**
      * Enable sandbox mode on a MailSettings object
-     *
-     * @throws TypeException
      */
     public function enableSandboxMode()
     {
@@ -201,8 +209,6 @@ class MailSettings implements \JsonSerializable
 
     /**
      * Disable sandbox mode on a MailSettings object
-     *
-     * @throws TypeException
      */
     public function disableSandboxMode()
     {
@@ -222,7 +228,7 @@ class MailSettings implements \JsonSerializable
      *                                    a copy of your email along with the spam
      *                                    report to be sent to
      *
-     * @throws TypeException
+     * @return null
      */
     public function setSpamCheck($enable, $threshold = null, $post_to_url = null)
     {
@@ -231,10 +237,8 @@ class MailSettings implements \JsonSerializable
             $this->spam_check = $spam_check;
             return;
         }
-        Assert::boolean(
-            $enable, 'enable', 'Value "$enable" must be an instance of SendGrid\Mail\SpamCheck or a boolean.'
-        );
         $this->spam_check = new SpamCheck($enable, $threshold, $post_to_url);
+        return;
     }
 
     /**

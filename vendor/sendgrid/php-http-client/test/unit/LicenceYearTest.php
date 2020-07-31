@@ -2,9 +2,7 @@
 
 namespace SendGrid\Test;
 
-use PHPUnit\Framework\TestCase;
-
-class LicenceYearTest extends TestCase
+class LicenceYearTest extends \PHPUnit_Framework_TestCase
 {
     public function testConstructor()
     {
