@@ -7,4 +7,30 @@
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA4aoavX1qPSOaUbI05oqDhvkI7xMMbttg",
+      authDomain: "femme-sport.firebaseapp.com",
+      databaseURL: "https://femme-sport.firebaseio.com",
+      projectId: "femme-sport",
+      storageBucket: "femme-sport.appspot.com",
+      messagingSenderId: "592184879157",
+      appId: "1:592184879157:web:3125d2156c9c12c096297c",
+      measurementId: "G-BDP5H35ETH"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </head>
