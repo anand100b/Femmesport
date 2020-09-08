@@ -1,14 +1,18 @@
 <?php
 require('vendor/autoload.php');
+require_once 'GFirestore.php';
 
+use GPBMetadata\Google\Firestore\V1Beta1\Firestore;
 use oldspice\Navigation;
 use oldspice\Product;
 use oldspice\Category;
 use oldspice\WishList;
 use Kreait\Firebase\Factory;
-$factory = (new Factory)->withServiceAccount('/path/to/firebase_credentials.json');
+use Kreait\Firebase\ServiceAccount;
 
+$fs = new GFirestore('news');
 
+print_r($fs->getDocument('VuJmnirTcpxJiGjXjwYx'));
 
 $navigation = Navigation::getNavigation();
 //Twig

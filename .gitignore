@@ -10,7 +10,7 @@ firebase-debug.*.log*
 # Firebase cache
 .firebase/
 
-secret/
+secret.*
 
 # Firebase config
 
@@ -66,3 +66,7 @@ node_modules/
 
 # dotenv environment variables file
 .env
+node_modules
+node_modules
+node_modules
+node_modules
