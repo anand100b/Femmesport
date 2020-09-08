@@ -5,6 +5,9 @@ use oldspice\Navigation;
 use oldspice\Product;
 use oldspice\Category;
 use oldspice\WishList;
+use Kreait\Firebase\Factory;
+$factory = (new Factory)->withServiceAccount('/path/to/firebase_credentials.json');
+
 
 
 $navigation = Navigation::getNavigation();
