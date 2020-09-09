@@ -11,14 +11,12 @@
       <div class="col-md-1 ">
       <div id="game">
      <div class="row">
-     <p>HELLO</p>
         {% for item in products %}
-          
+            <p>{{ title }}</p>
+            <p>HELLO</p>
             <div class="col-md-4">
-            
-              <p>HELLO</p>
               <h4 class="text-capitalize" >{{item.title}}</h4>
-              <h5>${{item.author}}</h5>
+              <h5>{{item.author}}</h5>
               <p>{{item.details | slice(0,100) ~ '...' }}</p>
             </div>
         {% endfor %}
