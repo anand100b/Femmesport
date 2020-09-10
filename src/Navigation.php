@@ -5,7 +5,12 @@ class Navigation {
   private static $nav_items = array(
     array('name' => 'Home', 'link' => 'index.php'),
     array('name' => 'Login', 'link' => 'login.php'),
-    array('name' => 'Register', 'link' => 'register.php'),
+    array('name' => 'LiveScores', 'link' => 'LiveScores.php'),
+    array('name' => 'register', 'link' => 'register.php'),
+    array('name' => 'Stats' , 'link' => 'Stats.php'),
+    array('name' => 'Sports' , 'link' => 'Sports.php'),
+    array('name' => 'Teams' , 'link' => 'Teams.php'),
+    array('name' => 'Videos' , 'link' => 'Videos.php'),
     array('name' => 'Contact', 'link' => 'contact.php'),
     array('name' => 'About' , 'link' => 'about.php')
   );
