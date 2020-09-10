@@ -12,17 +12,28 @@ use Kreait\Firebase\ServiceAccount;
 
 $fs = new GFirestore('news');
 
-print_r($fs->getDocument('VuJmnirTcpxJiGjXjwYx'));
+//print_r($fs->getDocument('VuJmnirTcpxJiGjXjwYx'));
+//print_r($fs->getWhere('id', '=' , 1));
 
+$arr = $fs->getWhere('id', '>' , 0);
+print_r($arr);
 $navigation = Navigation::getNavigation();
 //Twig
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment( $loader );
 //load the template
 $template = $twig -> load( 'home.twig' );
+$newarr = array();
+foreach($arr as $key){
+  $newarr = array_push($key);
+}
 //output the template to page
-echo $template -> render([
-  'navigation' => $navigation,
-  'title' => 'Home Page'
-]);
+echo $twig -> render('home.twig',
+  array(
+    'navigation' => $navigation,
+    'title' => 'Home Page',
+    'products' => $arr,
+    //'products' => array(array('author' => 'bbaiubfasb', 'title' => 'nfanufa')),
+  )
+);
 ?>
