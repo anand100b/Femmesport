@@ -9,7 +9,9 @@
     "google/cloud-datastore": "^1.11",
     "google/cloud": "^0.138.0",
     "google/cloud-firestore": "^1.14",
-    "grpc/grpc": "v1.27.0"
+    "grpc/grpc": "v1.27.0",
+    "guzzlehttp/guzzle": "6.2.1",
+    "jelle-s/thesportsdb": "^1.1"
   },
   "autoload": {
     "psr-4": {

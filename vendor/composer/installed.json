@@ -54,6 +54,49 @@
         ]
     },
     {
+        "name": "fastnorth/property-mapper",
+        "version": "0.0.4",
+        "version_normalized": "0.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/fastnorth/property-mapper.git",
+            "reference": "24ccb2412893adb6f2c23bd6da4782b618121adf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/fastnorth/property-mapper/zipball/24ccb2412893adb6f2c23bd6da4782b618121adf",
+            "reference": "24ccb2412893adb6f2c23bd6da4782b618121adf",
+            "shasum": ""
+        },
+        "require": {
+            "symfony/property-access": "^2.7"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8",
+            "symfony/var-dumper": "^2.7"
+        },
+        "time": "2015-11-20T19:53:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FastNorth\\PropertyMapper\\": "src/FastNorth/PropertyMapper",
+                "FastNorth\\PropertyMapper\\Tests\\": "tests"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "naneau",
+                "email": "git@naneau.net"
+            }
+        ],
+        "description": "Transforms data structures"
+    },
+    {
         "name": "fig/http-message-util",
         "version": "1.1.4",
         "version_normalized": "1.1.4.0",
@@ -282,17 +325,17 @@
     },
     {
         "name": "google/auth",
-        "version": "v1.11.1",
-        "version_normalized": "1.11.1.0",
+        "version": "v1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/googleapis/google-auth-library-php.git",
-            "reference": "bb959e91bd8ffbd352ab76cbf11d656ce6435088"
+            "reference": "74cad289014f7ef747618480f6b59f6303357f34"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/bb959e91bd8ffbd352ab76cbf11d656ce6435088",
-            "reference": "bb959e91bd8ffbd352ab76cbf11d656ce6435088",
+            "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/74cad289014f7ef747618480f6b59f6303357f34",
+            "reference": "74cad289014f7ef747618480f6b59f6303357f34",
             "shasum": ""
         },
         "require": {
@@ -314,7 +357,7 @@
         "suggest": {
             "phpseclib/phpseclib": "May be used in place of OpenSSL for signing strings or for token management. Please require version ^2."
         },
-        "time": "2020-07-27T18:33:35+00:00",
+        "time": "2020-09-08T16:33:56+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -868,56 +911,44 @@
     },
     {
         "name": "guzzlehttp/guzzle",
-        "version": "7.0.1",
-        "version_normalized": "7.0.1.0",
+        "version": "6.2.1",
+        "version_normalized": "6.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "2d9d3c186a6637a43193e66b097c50e4451eaab2"
+            "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/2d9d3c186a6637a43193e66b097c50e4451eaab2",
-            "reference": "2d9d3c186a6637a43193e66b097c50e4451eaab2",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
+            "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
             "shasum": ""
         },
         "require": {
-            "ext-json": "*",
             "guzzlehttp/promises": "^1.0",
-            "guzzlehttp/psr7": "^1.6.1",
-            "php": "^7.2.5",
-            "psr/http-client": "^1.0"
-        },
-        "provide": {
-            "psr/http-client-implementation": "1.0"
+            "guzzlehttp/psr7": "^1.3.1",
+            "php": ">=5.5"
         },
         "require-dev": {
-            "ergebnis/composer-normalize": "^2.0",
             "ext-curl": "*",
-            "php-http/client-integration-tests": "dev-phpunit8",
-            "phpunit/phpunit": "^8.5.5",
-            "psr/log": "^1.1"
+            "phpunit/phpunit": "^4.0",
+            "psr/log": "^1.0"
         },
-        "suggest": {
-            "ext-curl": "Required for CURL handler support",
-            "ext-intl": "Required for Internationalized Domain Name (IDN) support",
-            "psr/log": "Required for using the Log middleware"
-        },
-        "time": "2020-06-27T10:33:25+00:00",
+        "time": "2016-07-15T17:22:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "7.0-dev"
+                "dev-master": "6.2-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\": "src/"
-            },
             "files": [
                 "src/functions_include.php"
-            ]
+            ],
+            "psr-4": {
+                "GuzzleHttp\\": "src/"
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -928,11 +959,6 @@
                 "name": "Michael Dowling",
                 "email": "mtdowling@gmail.com",
                 "homepage": "https://github.com/mtdowling"
-            },
-            {
-                "name": "Márk Sági-Kazár",
-                "email": "mark.sagikazar@gmail.com",
-                "homepage": "https://sagikazarmark.hu"
             }
         ],
         "description": "Guzzle is a PHP HTTP client library",
@@ -943,8 +969,6 @@
             "framework",
             "http",
             "http client",
-            "psr-18",
-            "psr-7",
             "rest",
             "web service"
         ]
@@ -1074,6 +1098,58 @@
             "uri",
             "url"
         ]
+    },
+    {
+        "name": "jelle-s/thesportsdb",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Jelle-S/TheSportsDb.git",
+            "reference": "964845af7d1e13e4bfcfba1e1e3953d6e6ad68d9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Jelle-S/TheSportsDb/zipball/964845af7d1e13e4bfcfba1e1e3953d6e6ad68d9",
+            "reference": "964845af7d1e13e4bfcfba1e1e3953d6e6ad68d9",
+            "shasum": ""
+        },
+        "require": {
+            "fastnorth/property-mapper": "^0.0.4",
+            "guzzlehttp/guzzle": "^6.2",
+            "php": "^5.6 || ^7.0"
+        },
+        "require-dev": {
+            "codacy/coverage": "dev-master",
+            "codeclimate/php-test-reporter": "dev-master",
+            "phpunit/phpunit": "^5.5",
+            "psr/log": "^1.0"
+        },
+        "suggest": {
+            "hendricha/tagpass": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php",
+            "symfony/config": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php",
+            "symfony/dependency-injection": "Allows the use of a dependency injection container with TheSportsDb.",
+            "symfony/yaml": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php"
+        },
+        "time": "2016-09-23T09:51:24+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TheSportsDb\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Jelle Sebreghts",
+                "email": "sebreghts.jelle@gmail.com"
+            }
+        ],
+        "description": "PSR-4 API library for thesportsdb.com"
     },
     {
         "name": "kreait/clock",
@@ -1542,57 +1618,6 @@
         ]
     },
     {
-        "name": "psr/http-client",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/php-fig/http-client.git",
-            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^7.0 || ^8.0",
-            "psr/http-message": "^1.0"
-        },
-        "time": "2020-06-29T06:28:15+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Psr\\Http\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "PHP-FIG",
-                "homepage": "http://www.php-fig.org/"
-            }
-        ],
-        "description": "Common interface for HTTP clients",
-        "homepage": "https://github.com/php-fig/http-client",
-        "keywords": [
-            "http",
-            "http-client",
-            "psr",
-            "psr-18"
-        ]
-    },
-    {
         "name": "psr/http-message",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -2047,27 +2072,32 @@
     },
     {
         "name": "sendgrid/php-http-client",
-        "version": "3.10.2",
-        "version_normalized": "3.10.2.0",
+        "version": "3.11.1",
+        "version_normalized": "3.11.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sendgrid/php-http-client.git",
-            "reference": "a3891dfe1130014e46b59e3c76be0c1c9d4fd540"
+            "reference": "b7e45dc6734357253217d63bf0d661fe18013e48"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sendgrid/php-http-client/zipball/a3891dfe1130014e46b59e3c76be0c1c9d4fd540",
-            "reference": "a3891dfe1130014e46b59e3c76be0c1c9d4fd540",
+            "url": "https://api.github.com/repos/sendgrid/php-http-client/zipball/b7e45dc6734357253217d63bf0d661fe18013e48",
+            "reference": "b7e45dc6734357253217d63bf0d661fe18013e48",
             "shasum": ""
         },
         "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
             "php": ">=5.6"
         },
         "require-dev": {
-            "phpunit/phpunit": "~4.4",
+            "friendsofphp/php-cs-fixer": "^2.16",
+            "phpunit/phpunit": "^5.7 || ^6.5",
+            "sebastian/version": "^1.0.6",
             "squizlabs/php_codesniffer": "~2.0"
         },
-        "time": "2020-01-22T20:51:56+00:00",
+        "time": "2020-08-19T19:09:43+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2082,7 +2112,7 @@
         "authors": [
             {
                 "name": "Matt Bernier",
-                "email": "dx@sendgrid.com"
+                "email": "mbernier@twilio.com"
             },
             {
                 "name": "Elmer Thomas",
@@ -2101,17 +2131,17 @@
     },
     {
         "name": "sendgrid/sendgrid",
-        "version": "7.4.2",
-        "version_normalized": "7.4.2.0",
+        "version": "7.8.3",
+        "version_normalized": "7.8.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sendgrid/sendgrid-php.git",
-            "reference": "d697c9e1677516314c28d2b946cc3062ee9537ff"
+            "reference": "3883392ceb5066be4607c47de7fda9c5e7dbcfa4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/d697c9e1677516314c28d2b946cc3062ee9537ff",
-            "reference": "d697c9e1677516314c28d2b946cc3062ee9537ff",
+            "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/3883392ceb5066be4607c47de7fda9c5e7dbcfa4",
+            "reference": "3883392ceb5066be4607c47de7fda9c5e7dbcfa4",
             "shasum": ""
         },
         "require": {
@@ -2120,7 +2150,8 @@
             "ext-mbstring": "*",
             "ext-openssl": "*",
             "php": ">=5.6",
-            "sendgrid/php-http-client": "~3.10"
+            "sendgrid/php-http-client": "~3.10",
+            "starkbank/ecdsa": "0.*"
         },
         "replace": {
             "sendgrid/sendgrid-php": "*"
@@ -2130,18 +2161,21 @@
             "squizlabs/php_codesniffer": "3.*",
             "swaggest/json-diff": "^3.4"
         },
-        "time": "2020-01-22T20:59:57+00:00",
+        "time": "2020-09-02T19:58:01+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "SendGrid\\": "lib/",
-                "SendGrid\\Mail\\": "lib/mail/",
                 "SendGrid\\Contacts\\": "lib/contacts/",
+                "SendGrid\\EventWebhook\\": "lib/eventwebhook/",
+                "SendGrid\\Helper\\": "lib/helper/",
+                "SendGrid\\Mail\\": "lib/mail/",
                 "SendGrid\\Stats\\": "lib/stats/"
             },
-            "files": [
-                "lib/SendGrid.php"
+            "classmap": [
+                "lib/BaseSendGridClientInterface.php",
+                "lib/SendGrid.php",
+                "lib/TwilioEmail.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -2159,18 +2193,59 @@
         ]
     },
     {
-        "name": "symfony/polyfill-ctype",
-        "version": "v1.13.1",
-        "version_normalized": "1.13.1.0",
+        "name": "starkbank/ecdsa",
+        "version": "0.0.4",
+        "version_normalized": "0.0.4.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/symfony/polyfill-ctype.git",
-            "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
+            "url": "https://github.com/starkbank/ecdsa-php.git",
+            "reference": "9369d35ed9019321adb4eb9fd3be21357d527c74"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
-            "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+            "url": "https://api.github.com/repos/starkbank/ecdsa-php/zipball/9369d35ed9019321adb4eb9fd3be21357d527c74",
+            "reference": "9369d35ed9019321adb4eb9fd3be21357d527c74",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5"
+        },
+        "time": "2020-05-15T15:46:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/ellipticcurve.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "StarkBank",
+                "email": "developers@starkbank.com",
+                "homepage": "https://starkbank.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "fast openSSL-compatible implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA)",
+        "homepage": "https://github.com/starkbank/ecdsa-php"
+    },
+    {
+        "name": "symfony/polyfill-ctype",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-ctype.git",
+            "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
+            "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
             "shasum": ""
         },
         "require": {
@@ -2179,11 +2254,15 @@
         "suggest": {
             "ext-ctype": "For best performance"
         },
-        "time": "2019-11-27T13:56:44+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.13-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -2216,6 +2295,20 @@
             "ctype",
             "polyfill",
             "portable"
+        ],
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
         ]
     },
     {
@@ -2298,18 +2391,81 @@
         ]
     },
     {
-        "name": "twig/twig",
-        "version": "v1.42.4",
-        "version_normalized": "1.42.4.0",
+        "name": "symfony/property-access",
+        "version": "v2.8.52",
+        "version_normalized": "2.8.52.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/twigphp/Twig.git",
-            "reference": "e587180584c3d2d6cb864a0454e777bb6dcb6152"
+            "url": "https://github.com/symfony/property-access.git",
+            "reference": "c8f10191183be9bb0d5a1b8364d3891f1bde07b6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig/zipball/e587180584c3d2d6cb864a0454e777bb6dcb6152",
-            "reference": "e587180584c3d2d6cb864a0454e777bb6dcb6152",
+            "url": "https://api.github.com/repos/symfony/property-access/zipball/c8f10191183be9bb0d5a1b8364d3891f1bde07b6",
+            "reference": "c8f10191183be9bb0d5a1b8364d3891f1bde07b6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9",
+            "symfony/polyfill-ctype": "~1.8"
+        },
+        "time": "2018-11-11T11:18:13+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\PropertyAccess\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony PropertyAccess Component",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "access",
+            "array",
+            "extraction",
+            "index",
+            "injection",
+            "object",
+            "property",
+            "property path",
+            "reflection"
+        ]
+    },
+    {
+        "name": "twig/twig",
+        "version": "v1.42.5",
+        "version_normalized": "1.42.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
+            "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
             "shasum": ""
         },
         "require": {
@@ -2318,10 +2474,9 @@
         },
         "require-dev": {
             "psr/container": "^1.0",
-            "symfony/debug": "^3.4|^4.2",
-            "symfony/phpunit-bridge": "^4.4@dev|^5.0"
+            "symfony/phpunit-bridge": "^4.4|^5.0"
         },
-        "time": "2019-11-11T16:49:32+00:00",
+        "time": "2020-02-11T05:59:23+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2350,7 +2505,6 @@
             },
             {
                 "name": "Twig Team",
-                "homepage": "https://twig.symfony.com/contributors",
                 "role": "Contributors"
             },
             {

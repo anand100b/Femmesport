@@ -1,0 +1,33 @@
+{
+  "name": "jelle-s/thesportsdb",
+  "description": "PSR-4 API library for thesportsdb.com",
+  "type": "library",
+  "require": {
+    "guzzlehttp/guzzle": "^6.2",
+    "fastnorth/property-mapper": "^0.0.4",
+    "php": "^5.6 || ^7.0"
+  },
+  "suggest": {
+    "symfony/dependency-injection": "Allows the use of a dependency injection container with TheSportsDb.",
+    "hendricha/tagpass": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php",
+    "symfony/config": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php",
+    "symfony/yaml": "Required in combination with symfony/dependency-injection when using the default_bootstrap.php"
+  },
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Jelle Sebreghts",
+      "email": "sebreghts.jelle@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"TheSportsDb\\": "src/"}
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "^5.5",
+    "psr/log": "^1.0",
+	  "codeclimate/php-test-reporter": "dev-master",
+	  "codacy/coverage": "dev-master"
+  }
+}

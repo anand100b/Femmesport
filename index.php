@@ -1,6 +1,7 @@
 <?php
 require('vendor/autoload.php');
 require_once 'GFirestore.php';
+include_once __DIR__ . '/default_bootstrap.php';
 
 use GPBMetadata\Google\Firestore\V1Beta1\Firestore;
 use oldspice\Navigation;
@@ -15,8 +16,12 @@ $fs = new GFirestore('news');
 //print_r($fs->getDocument('VuJmnirTcpxJiGjXjwYx'));
 //print_r($fs->getWhere('id', '=' , 1));
 
+// Get all sports.
+//$sports = $db->getSports();
+//print_r($sports);
+
 $arr = $fs->getWhere('id', '>' , 0);
-print_r($arr);
+//print_r($arr);
 $navigation = Navigation::getNavigation();
 //Twig
 $loader = new Twig_Loader_Filesystem('templates');
